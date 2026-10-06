@@ -85,13 +85,13 @@ contains
          mp = int(month+9,int64)
       end if
       doy = (153_int64*mp+2_int64)/5_int64 + int(day-1,int64)
-      n = era*146097_int64 + yoe*365_int64 + yoe/4_int64 - yoe/100_int64 + doy
+      n = era*146097_int64 + yoe*365_int64 + yoe/4_int64 - yoe/100_int64 + doy - 306_int64
    end function
 
    !> Return Monday=1 through Sunday=7.
    pure integer function weekday(date) result(w)
       type(civil_date), intent(in) :: date
-      w = int(modulo(ordinal(date%y,date%m,date%d)+5_int64,7_int64))+1
+      w = int(modulo(ordinal(date%y,date%m,date%d),7_int64))+1
    end function
    pure integer function day_of_year(date) result(n)
       type(civil_date), intent(in) :: date
@@ -155,14 +155,15 @@ contains
       integer(int64), intent(in) :: n
       integer, intent(out), optional :: status
       type(civil_date) :: date
-      integer(int64) :: era, doe, yoe, y, doy, mp, d, m
+      integer(int64) :: era, doe, yoe, y, doy, mp, d, m, z
       integer :: s
       s=date_status_ok
       if (n < ordinal(min_year,1,1) .or. n > ordinal(max_year,12,31)) then
          s=date_status_range; date=make_date(1,1,1)
       else
-         era=n/146097_int64
-         doe=n-era*146097_int64
+         z=n+306_int64
+         era=z/146097_int64
+         doe=z-era*146097_int64
          yoe=(doe-doe/1460_int64+doe/36524_int64-doe/146096_int64)/365_int64
          y=yoe+era*400_int64
          doy=doe-(365_int64*yoe+yoe/4_int64-yoe/100_int64)
