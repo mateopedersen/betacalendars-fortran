@@ -8,4 +8,4 @@ project_url: https://mateopedersen.github.io/betacalendars-fortran/
 project_website: https://www.betacalendars.com/
 project_github: mateopedersen/betacalendars-fortran
 license: MIT
-         
+search: false
