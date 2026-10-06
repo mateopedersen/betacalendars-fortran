@@ -85,7 +85,7 @@ The CI workflow targets GNU Fortran and AOCC Flang. Specific version support wil
 
 ## Documentation
 
-API documentation is prepared for FORD; see `ford.md` and `page/index.md`.
+Browse the [FORD API documentation](https://mateopedersen.github.io/betacalendars-fortran/). Its source and landing page are `ford.md` and `page/index.md`.
 
 ## Testing
 

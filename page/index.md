@@ -43,7 +43,7 @@ Run `fpm test`. CI exercises GNU Fortran and AOCC Flang. Actual supported compil
 
 ## API documentation
 
-The source is documented for FORD. Generate local documentation with `ford ford.md`; the GitHub Pages deployment URL will be recorded after Pages is configured and verified.
+The modules and public procedures are documented with FORD. The generated pages are hosted on GitHub Pages.
 
 ## Project
 
