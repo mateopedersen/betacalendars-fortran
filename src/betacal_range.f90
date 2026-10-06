@@ -29,7 +29,7 @@ contains
       type(civil_date),intent(in)::d
       range_contains=compare_dates(d,r%start_date)>=0.and.compare_dates(d,r%end_date)<=0
    end function
-   pure subroutine fill_range(r,dates,status)
+   subroutine fill_range(r,dates,status)
       type(date_range),intent(in)::r
       type(civil_date),allocatable,intent(out)::dates(:)
       integer,intent(out),optional::status
