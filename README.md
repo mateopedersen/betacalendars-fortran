@@ -81,7 +81,7 @@ Saturday and Sunday are weekends. Pass an optional array of excluded dates to bu
 
 ## Supported compilers
 
-The CI workflow targets GNU Fortran and LLVM Flang. Specific version support will be stated from actual CI results.
+The CI workflow targets GNU Fortran and AOCC Flang. Specific version support will be stated from actual CI results.
 
 ## Documentation
 

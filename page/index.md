@@ -37,7 +37,7 @@ The calendar is proleptic Gregorian, including dates before the historical 1582 
 
 ## Tests and compilers
 
-Run `fpm test`. CI exercises GNU Fortran with runtime checks and LLVM Flang. Actual supported compiler versions will be listed after successful CI runs.
+Run `fpm test`. CI exercises GNU Fortran and AOCC Flang. Actual supported compiler versions will be listed after successful CI runs.
 
 ## API documentation
 
