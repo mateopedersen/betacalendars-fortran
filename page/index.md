@@ -1,3 +1,5 @@
+title: Beta Calendars for Fortran
+
 # Beta Calendars for Fortran
 
 Beta Calendars for Fortran is a presentation-neutral library for proleptic Gregorian civil dates, deterministic calendar grids, and temporal boundary checks. It does not read the system clock, use a timezone, access the network, or depend on a website at runtime.
@@ -53,4 +55,4 @@ Bug reports and focused contributions are welcome. Calendar behavior must remain
 
 ## License
 
-MIT. See [LICENSE](../LICENSE).
+MIT. See the [license](https://github.com/mateopedersen/betacalendars-fortran/blob/main/LICENSE).
