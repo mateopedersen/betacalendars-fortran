@@ -21,7 +21,7 @@ contains
          end do
       end if
    end function
-   pure integer(int64) function business_days_between(first,last,excluded) result(n)
+   integer(int64) function business_days_between(first,last,excluded) result(n)
       type(civil_date),intent(in)::first,last
       type(civil_date),intent(in),optional::excluded(:)
       type(civil_date)::d
@@ -36,7 +36,7 @@ contains
       end do
       n=n*sign
    end function
-   pure function next_business_day(d,excluded,status) result(out)
+   function next_business_day(d,excluded,status) result(out)
       type(civil_date),intent(in)::d
       type(civil_date),intent(in),optional::excluded(:)
       integer,intent(out),optional::status
@@ -50,7 +50,7 @@ contains
       end do
       if(present(status))status=st
    end function
-   pure function previous_business_day(d,excluded,status) result(out)
+   function previous_business_day(d,excluded,status) result(out)
       type(civil_date),intent(in)::d
       type(civil_date),intent(in),optional::excluded(:)
       integer,intent(out),optional::status
