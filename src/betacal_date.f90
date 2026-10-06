@@ -22,7 +22,7 @@ module betacalendars__date
    public :: date_to_string, date_from_ordinal
 contains
    !> Construct a date. Invalid input returns 0001-01-01 and a nonzero status.
-   function make_date(year, month, day, status) result(date)
+   pure function make_date(year, month, day, status) result(date)
       integer, intent(in) :: year, month, day
       integer, intent(out), optional :: status
       type(civil_date) :: date
@@ -118,7 +118,7 @@ contains
    end function
    !> Add a signed day count. On overflow of the supported year range, returns
    !> the input date and sets status=date_status_range.
-   function add_days(date, count, status) result(out)
+   pure function add_days(date, count, status) result(out)
       type(civil_date), intent(in) :: date
       integer(int64), intent(in) :: count
       integer, intent(out), optional :: status
@@ -138,20 +138,20 @@ contains
       if (s /= date_status_ok) out=date
       if (present(status)) status=s
    end function
-   function next_day(date, status) result(out)
+   pure function next_day(date, status) result(out)
       type(civil_date), intent(in) :: date
       integer, intent(out), optional :: status
       type(civil_date) :: out
       out=add_days(date,1_int64,status)
    end function
-   function previous_day(date, status) result(out)
+   pure function previous_day(date, status) result(out)
       type(civil_date), intent(in) :: date
       integer, intent(out), optional :: status
       type(civil_date) :: out
       out=add_days(date,-1_int64,status)
    end function
    !> Convert an ordinal produced by this module back to a date.
-   function date_from_ordinal(n, status) result(date)
+   pure function date_from_ordinal(n, status) result(date)
       integer(int64), intent(in) :: n
       integer, intent(out), optional :: status
       type(civil_date) :: date
