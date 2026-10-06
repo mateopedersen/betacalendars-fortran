@@ -1,0 +1,12 @@
+name = "betacalendars"
+version = "1.0.0"
+license = "MIT"
+author = "Mateo Pedersen"
+copyright = "Copyright 2026 Mateo Pedersen"
+description = "Deterministic civil-calendar grids, bounded recurrence, and temporal boundary utilities for Modern Fortran."
+categories = ["libraries", "programming"]
+keywords = ["calendar", "date", "gregorian", "recurrence", "testing"]
+homepage = "https://www.betacalendars.com/"
+
+[build]
+module-naming = true

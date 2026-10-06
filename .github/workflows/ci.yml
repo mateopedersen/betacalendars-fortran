@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  gfortran:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fortran-lang/setup-fortran@v1
+        with:
+          compiler: gfortran
+      - uses: fortran-lang/setup-fpm@v10
+      - run: fpm test --profile debug --flag "-Wall -Wextra -Wimplicit-interface -Werror=implicit-interface -fcheck=all -fbacktrace"
+      - run: fpm build --profile release
+      - run: fpm run --example month_grid
+      - run: fpm run --example year_turn
+  llvm-flang:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fortran-lang/setup-fortran@v1
+        with:
+          compiler: gcc
+      - uses: fortran-lang/setup-fpm@v7
+      - run: fpm test --profile debug --flag "-Wall -Wextra -fcheck=all -fbacktrace"
