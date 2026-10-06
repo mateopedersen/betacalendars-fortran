@@ -1,5 +1,6 @@
 !> Deterministic presentation-neutral calendar month grids.
 module betacalendars__grid
+   use, intrinsic :: iso_fortran_env, only:int64
    use betacalendars__date
    implicit none
    private
