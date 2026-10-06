@@ -9,7 +9,7 @@ module betacalendars__year
    end type
    public :: make_year_grid
 contains
-   pure function make_year_grid(year,week_start,row_mode,overflow_mode,status) result(out)
+   function make_year_grid(year,week_start,row_mode,overflow_mode,status) result(out)
       integer,intent(in)::year,week_start
       integer,intent(in),optional::row_mode,overflow_mode
       integer,intent(out),optional::status

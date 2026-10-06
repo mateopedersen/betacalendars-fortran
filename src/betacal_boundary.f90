@@ -15,7 +15,7 @@ module betacalendars__boundary
    public::year_turn_window,boundaries_for_month
 contains
    !> Start dates of November and December in year and January and February in year+1.
-   pure function year_turn_window(year,status) result(w)
+   function year_turn_window(year,status) result(w)
       integer,intent(in)::year
       integer,intent(out),optional::status
       type(year_turn_window_type)::w
@@ -30,7 +30,7 @@ contains
       if(present(status))status=s
    end function
    !> Summarize the month's edges, length transition, leap day, and ending ISO week.
-   pure function boundaries_for_month(year,month,status) result(report)
+   function boundaries_for_month(year,month,status) result(report)
       integer,intent(in)::year,month
       integer,intent(out),optional::status
       type(boundary_report)::report

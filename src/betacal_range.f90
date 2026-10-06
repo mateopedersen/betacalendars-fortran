@@ -9,7 +9,7 @@ module betacalendars__range
    end type
    public::make_date_range,range_length,range_contains,fill_range
 contains
-   pure function make_date_range(first,last,status) result(r)
+   function make_date_range(first,last,status) result(r)
       type(civil_date),intent(in)::first,last
       integer,intent(out),optional::status
       type(date_range)::r

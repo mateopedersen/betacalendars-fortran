@@ -9,7 +9,7 @@ module betacalendars__recurrence
 contains
    !> Emit dates from start through finish on the requested day of each month.
    !! A short month skips, clamps to month end, or reports an error explicitly.
-   pure subroutine monthly_day_occurrences(start,finish,day,policy,dates,status)
+   subroutine monthly_day_occurrences(start,finish,day,policy,dates,status)
       type(civil_date),intent(in)::start,finish
       integer,intent(in)::day,policy
       type(civil_date),allocatable,intent(out)::dates(:)

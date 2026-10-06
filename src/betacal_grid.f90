@@ -20,7 +20,7 @@ module betacalendars__grid
    public :: make_month_grid
 contains
    !> Build a Monday=1 ... Sunday=7 based month grid.
-   pure function make_month_grid(year, month, week_start, row_mode, overflow_mode, status) result(grid)
+   function make_month_grid(year, month, week_start, row_mode, overflow_mode, status) result(grid)
       integer, intent(in) :: year,month,week_start
       integer, intent(in), optional :: row_mode,overflow_mode
       integer, intent(out), optional :: status

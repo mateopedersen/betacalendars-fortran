@@ -21,7 +21,7 @@ contains
       type(leap_year_fixture)::f
       f%year=year;f%is_leap=is_leap_year(year);f%february_days=days_in_month(year,2)
    end function
-   pure function month_fixture(year,month) result(f)
+   function month_fixture(year,month) result(f)
       integer,intent(in)::year,month
       type(month_boundary_fixture)::f
       f%year=year;f%month=month;f%length=days_in_month(year,month)
@@ -32,7 +32,7 @@ contains
          f%last=f%first
       end if
    end function
-   pure function year_turn_fixture(year,status) result(w)
+   function year_turn_fixture(year,status) result(w)
       integer,intent(in)::year
       integer,intent(out),optional::status
       type(year_turn_window_type)::w

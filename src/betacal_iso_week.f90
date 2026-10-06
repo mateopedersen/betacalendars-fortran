@@ -6,7 +6,7 @@ module betacalendars__iso_week
    public :: iso_week
 contains
    !> Return ISO week number and week-based year.
-   pure subroutine iso_week(date, week, week_year)
+   subroutine iso_week(date, week, week_year)
       type(civil_date), intent(in) :: date
       integer, intent(out) :: week,week_year
       type(civil_date) :: thursday,jan4,week1
