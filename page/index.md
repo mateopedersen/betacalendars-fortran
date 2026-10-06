@@ -6,7 +6,7 @@ Beta Calendars for Fortran is a presentation-neutral library for proleptic Grego
 
 ## Installation
 
-Before a public tagged release is available, use a Git dependency:
+Use the tagged Git release with fpm:
 
 ```toml
 [dependencies]
@@ -43,11 +43,19 @@ Run `fpm test`. CI exercises GNU Fortran and AOCC Flang. Actual supported compil
 
 ## API documentation
 
-The modules and public procedures are documented with FORD. The generated pages are hosted on GitHub Pages.
+The modules and public procedures are documented with FORD at the [API documentation site](https://mateopedersen.github.io/betacalendars-fortran/).
 
-## Project
+## Project and source
 
-Beta Calendars for Fortran is maintained as part of the Beta Calendars developer tooling project: [betacalendars.com](https://www.betacalendars.com/).
+Beta Calendars for Fortran is an open-source Fortran library maintained as part of the broader Beta Calendars calendar-engineering project. The parent project is [Beta Calendars](https://www.betacalendars.com/).
+
+The primary source repository is [GitHub](https://github.com/mateopedersen/betacalendars-fortran). All package source code, issues, releases, and contributions are hosted there.
+
+- [Source repository](https://github.com/mateopedersen/betacalendars-fortran)
+- [Issue tracker](https://github.com/mateopedersen/betacalendars-fortran/issues)
+- [Releases](https://github.com/mateopedersen/betacalendars-fortran/releases)
+- [API documentation](https://mateopedersen.github.io/betacalendars-fortran/)
+- [Parent project: Beta Calendars](https://www.betacalendars.com/)
 
 ## Contributing
 

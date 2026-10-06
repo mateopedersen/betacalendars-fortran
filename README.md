@@ -2,6 +2,15 @@
 
 Deterministic civil-calendar grids, bounded recurrence, and temporal boundary utilities for Modern Fortran.
 
+## Project and source
+
+- **Primary source repository:** <https://github.com/mateopedersen/betacalendars-fortran>
+- **Issue tracker:** <https://github.com/mateopedersen/betacalendars-fortran/issues>
+- **Releases:** <https://github.com/mateopedersen/betacalendars-fortran/releases>
+- **Parent project:** <https://www.betacalendars.com/>
+
+Beta Calendars for Fortran is an open-source Fortran library maintained as part of the broader Beta Calendars calendar-engineering project; all source code, releases, issues, and contributions for this package live in this GitHub repository.
+
 ## Purpose
 
 This is a standalone Fortran library for civil calendar structures and regression work around dates. It is useful in scientific reports, simulation schedules, batch processing, forecasting, and calendar UI backends. It is not a clock or timezone library, and its core has no runtime dependencies.
@@ -85,7 +94,9 @@ The CI workflow targets GNU Fortran and AOCC Flang. Specific version support wil
 
 ## Documentation
 
-Browse the [FORD API documentation](https://mateopedersen.github.io/betacalendars-fortran/). Its source and landing page are `ford.md` and `page/index.md`.
+- **API documentation:** <https://mateopedersen.github.io/betacalendars-fortran/>
+- **Source repository:** <https://github.com/mateopedersen/betacalendars-fortran>
+- **Parent project:** <https://www.betacalendars.com/>
 
 ## Testing
 
@@ -98,7 +109,3 @@ Keep behavior deterministic, portable, explicit about bounds, and covered by reg
 ## License
 
 MIT; see [LICENSE](LICENSE).
-
-## Project
-
-Beta Calendars for Fortran is maintained as part of the Beta Calendars developer tooling project: [https://www.betacalendars.com/](https://www.betacalendars.com/).
